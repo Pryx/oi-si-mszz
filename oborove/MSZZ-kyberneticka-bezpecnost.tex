@@ -1,0 +1,52 @@
+\documentclass[oneside]{report}
+
+\usepackage[x11names]{xcolor}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{delarray}
+\usepackage{float}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}				
+
+% code samples
+\usepackage{listings}
+\usepackage{courier}
+%\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single, % adds a frame around the code
+    xleftmargin=2cm,
+    xrightmargin=2cm,
+}
+
+% exercises and solutions
+\usepackage{mdframed}
+\newmdenv[topline=false, bottomline=false, skipabove=\topsep, rightline=false,
+  skipbelow=\topsep]{exercise}
+
+% graphs
+\usepackage{tikz}
+\usetikzlibrary[topaths]
+
+\title{Státnicové otázky oboru Softwarové Inženýrství}
+\date{}
+\author{https://github.com/pryx/oi-mszz}
+
+\begin{document}
+
+\maketitle
+
+%\include{PAL/PAL}
+%\include{TAL/TAL}
+%\include{KO/KO}
+\input{ZKS/ZKS}
+\input{BSY/BSY}
+\input{DS2/DS2}
+
+\end{document}
