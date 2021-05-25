@@ -140,7 +140,7 @@ Vývoj kernelu seL4 se držel správnými postupy návrhu: nejprve navrhli všec
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.5\textwidth]{BSY/img/kernel-rings.png}
+\includegraphics[width=0.5\textwidth]{oborove/BSY/img/kernel-rings.png}
 \end{figure}
 
 Buffer overflow: Připravíme si nějaký prostor v paměti a necháme ho uživatelem naplnit. Přitom nehlídáme, kolik dat uživatel zapisuje. Může se tedy stát, že útočník přepsal kus paměti, do kterého už by se psát nemělo, a tím třeba přepsal ukazatel na funkci, která se měla spouštět - mohl tedy spustit tu, kterou sám chtěl. Obrana proti tomu byla, že za čtenými daty se daly speciální tokeny a pak se kontrolovalo, jestli nebyly změněny.

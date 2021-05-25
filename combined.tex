@@ -1,0 +1,133 @@
+\documentclass[twoside, a4paper]{book}
+
+\usepackage[czech, english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[square, numbers]{natbib} % sazba pouzite literatury
+\usepackage{indentfirst} % 1. odstavec jako v cestine, pro práci v aj možno zakomentovat
+\usepackage{fancyhdr} % tisk hlaviček a patiček stránek
+\usepackage{nomencl} % umožňuje snadno definovat zkratky a jejich seznam
+
+% \usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xspace}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{bbding}
+\usepackage[usenames,dvipsnames]{color} % barvy
+\usepackage{url}
+\usepackage{subscript}
+
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{lipsum}
+\usepackage{pdfpages}
+
+\usepackage{courier}
+\usepackage{float}
+\usepackage{nonfloat}
+\usepackage{wrapfig}
+
+% utrzky kodu
+\usepackage{listings,xcolor}
+\usepackage{inconsolata}
+\usepackage{algorithm}
+\usepackage{algorithmicx} %slouží pro zápis algoritmů
+\usepackage{algpseudocode} %slouží pro výpis pseudokódu
+\usepackage{eqparbox}
+\usepackage{dirtree}
+\usepackage{array}
+\usepackage{amsmath} % matematicke symboly
+\usepackage{amsfonts}
+\usepackage{amsxtra} % matematicka pismena
+\usepackage{wasysym} % znak vyplnene sipky
+\usepackage{setspace} % vyska radku
+\usepackage{changepage} % zmena okraju stranky
+% \usepackage{soul}
+\usepackage{soulutf8}
+\usepackage{datetime} % datum a cas
+\usepackage{tabu} % vylepsene tabulky - ruzne siroke ohraniceni
+\usepackage{pgfgantt}
+\usepackage{textcomp}
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usepackage{pgfplots}
+\usepackage{tikz} % grafy
+\usetikzlibrary{arrows,shapes,backgrounds,snakes,patterns,calc,trees,positioning,chains,shapes.geometric,decorations.pathreplacing,decorations.pathmorphing,matrix,shapes.symbols,pgfplots.groupplots}
+
+% custom packages
+\usepackage{spolecne/_lib/infodata} % info strings
+\usepackage{spolecne/_lib/mathstyle}
+\usepackage{spolecne/_lib/macros}
+\usepackage{spolecne/_lib/colors} % barvy
+\usepackage{spolecne/_lib/codestyle} % highlight zdrojovych kodu
+\usepackage{spolecne/_lib/mathstyle} % matematicke pomocne fce
+
+\usepackage{spolecne/_lib/qtree}
+
+% code samples
+\usepackage{listings}
+\usepackage{courier}
+%\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single, % adds a frame around the code
+    xleftmargin=2cm,
+    xrightmargin=2cm,
+}
+
+% exercises and solutions
+\usepackage{mdframed}
+\newmdenv[topline=false, bottomline=false, skipabove=\topsep, rightline=false,
+  skipbelow=\topsep]{exercise}
+
+% graphs
+\usepackage{tikz}
+\usetikzlibrary[topaths]
+
+\title{Státnicové otázky oboru Softwarové Inženýrství}
+\date{}
+\author{https://github.com/pryx/oi-mszz}
+
+\begin{document}
+
+\maketitle
+
+%\include{PAL/PAL}
+%\include{TAL/TAL}
+%\include{KO/KO}
+\chapter{Společná část}
+\input{spolecne/01/01-spolecne}
+\input{spolecne/02/02-spolecne}
+\input{spolecne/03/03-spolecne}
+\input{spolecne/04/04-spolecne}
+\input{spolecne/05/05-spolecne}
+\input{spolecne/06/06-spolecne}
+\input{spolecne/07/07-spolecne}
+\input{spolecne/08/08-spolecne}
+\input{spolecne/09/09-spolecne}
+\input{spolecne/10/10-spolecne}
+
+\input{oborove/ZKS/ZKS}
+\input{oborove/DS2/DS2}
+\input{oborove/SWA/SWA}
+\input{oborove/PAG/PAG}
+
+\chapter[Bezpečnost systémů]{B4M36BSY \\[1ex]\Large{Bezpečnostní analýza operačních systémů, bezpečný vývoj software a bezpečnost webových aplikací. Analýza útoků a škodlivého kódu. Bezpečnost mobilních zařízení.}}
+
+\includepdf[pages=-]{oborove/BSY/vytah.pdf}
+
+\chapter[Efektivní Software]{B4M36ESW \\[1ex]\Large{Efektivní algoritmy a způsoby optimalizace. Datové struktury, synchronizace a vícevláknové programy.}}
+\includepdf[pages=3-37]{oborove/ESW/esw_guide.pdf}
+
+\bibliographystyle{spolecne/_lib/csplainnat}
+{
+    \footnotesize
+    \def\CS{$\cal C\kern-0.1667em\lower.5ex\hbox{$\cal S$}\kern-0.075em $}
+    \bibliography{reference}
+}
+\end{document}
