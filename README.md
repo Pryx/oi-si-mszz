@@ -1,6 +1,8 @@
 # oi-si-mszz
 Materiály k závěrečným zkouškám magisterského oboru OI Softwarové Inženýrství 
 
+## [Download PDF](https://github.com/Pryx/oi-si-mszz/releases/download/0.9/softwarove-inzenyrstvi.pdf)
+
 
 - [x] ✔️ [Společné otázky (sice rozdělené na víc částí ale stále platné)](https://github.com/mychalvlcek/cvut-oi-mssz)
 - [x] ✔️ [Metodika testování software. Metody vytváření testů z modelu aplikace. Automatické testování. B4M36ZKS](https://github.com/draliii/oi-mszz)
